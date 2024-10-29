@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Copy the ojdbc JAR into the Docker container
-COPY libs/ojdbc6-11.2.0.3.jar /app/libs/
+COPY /tmp/ojdbc6-11.2.0.3.jar /app/libs/
 
 # Install the ojdbc artifact in the local Maven repository
 RUN mvn install:install-file -Dfile=/app/libs/ojdbc6-11.2.0.3.jar -DgroupId=oracle -DartifactId=ojdbc6 -Dversion=11.2.0.3 -Dpackaging=jar
