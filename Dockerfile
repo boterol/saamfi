@@ -29,7 +29,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the JAR file from the build stage
-COPY --from=build /app/saamfi-rest/target/saamfiapi.war /app
+COPY --from=build /app/saamfi-rest/target/saamfiapi.war /app/saamfi-backend.war
 
 # Run the Spring Boot app
-CMD ["java", "-jar", "/app/saamfiapi.jar"]
+CMD ["java", "-jar", "/app/saamfi-backend.jar"]
