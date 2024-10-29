@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:11
 
 # Install Maven
 RUN apt-get update && \
@@ -16,9 +16,6 @@ RUN mvn install:install-file \
     -DartifactId=ojdbc6 \
     -Dversion=11.2.0.3 \
     -Dpackaging=jar
-
-# Set permissions for mvnw
-RUN chmod +x /app/mvnw
 
 # Compile and package the Spring Boot application
 WORKDIR /app
