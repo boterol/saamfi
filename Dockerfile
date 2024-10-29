@@ -1,10 +1,8 @@
-FROM openjdk:11
+FROM openjdk:11-jre-slim
 
-# Install Maven using the official Maven repository
+# Install Maven
 RUN apt-get update && \
-    apt-get install -y wget && \
-    wget -qO - https://archive.apache.org/dist/maven/binaries/apache-maven-3.6.3-bin.tar.gz | tar -xz -C /opt && \
-    ln -s /opt/apache-maven-3.6.3/bin/mvn /usr/bin/mvn && \
+    apt-get install -y maven && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy app source
