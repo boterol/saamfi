@@ -32,4 +32,4 @@ WORKDIR /app
 COPY --from=build /app/saamfi-rest/target/saamfiapi.war /app/saamfi-backend.war
 
 # Run the Spring Boot app
-CMD ["java", "-jar", "/app/saamfi-backend.jar"]
+CMD ["java", "-jar", "/app/saamfi-backend.war"]
