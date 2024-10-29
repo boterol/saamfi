@@ -1,4 +1,5 @@
-FROM openjdk:11
+FROM amazoncorretto:11
+
 
 # Install Maven
 RUN apt-get update && \
