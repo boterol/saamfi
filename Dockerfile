@@ -17,6 +17,9 @@ RUN mvn install:install-file \
     -Dversion=11.2.0.3 \
     -Dpackaging=jar
 
+# Set permissions for mvnw
+RUN chmod +x /app/mvnw
+
 # Compile and package the Spring Boot application
 WORKDIR /app
 RUN ./mvnw clean package -DskipTests
