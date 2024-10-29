@@ -1,4 +1,4 @@
-FROM amazoncorretto:11
+FROM maven:3.8.6-openjdk-11
 
 
 # Install Maven
