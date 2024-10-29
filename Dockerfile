@@ -1,4 +1,5 @@
-FROM openjdk:11-jre-slim
+# Use an OpenJDK base image with JDK installed
+FROM openjdk:11-jdk-slim
 
 # Install Maven
 RUN apt-get update && \
