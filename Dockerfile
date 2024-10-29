@@ -1,11 +1,6 @@
 FROM maven:3.8.6-openjdk-11
 
 
-# Install Maven
-RUN apt-get update && \
-    apt-get install -y maven && \
-    rm -rf /var/lib/apt/lists/*
-
 # Copy app source
 COPY . /app
 
