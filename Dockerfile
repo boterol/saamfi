@@ -19,7 +19,8 @@ RUN mvn install:install-file \
     -Dpackaging=jar
 
 # Compile and package the Spring Boot application
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean package -DskipTests -X
+
 
 # Use a smaller image for the runtime
 FROM openjdk:11-jre-slim
