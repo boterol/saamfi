@@ -4,6 +4,7 @@ target/
 !**/src/main/**
 !**/src/test/**
 !**/test-output/**
+!libs/ojdbc6-11.2.0.3.jar
 
 ### STS ###
 .apt_generated
