@@ -24,7 +24,7 @@ RUN mvn install -Dmaven.test.skip=true
 
 # Use a smaller image for the runtime
 FROM openjdk:11-jre-slim
-
+#
 # Set the working directory
 WORKDIR /app
 
