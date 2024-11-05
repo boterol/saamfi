@@ -31,5 +31,7 @@ WORKDIR /app
 # Copy the JAR file from the build stage
 COPY --from=build /app/saamfi-rest/target/saamfiapi.war /app/saamfi-backend.war
 
+EXPOSE 8080
+
 # Run the Spring Boot app
 CMD ["java", "-jar", "/app/saamfi-backend.war"]
