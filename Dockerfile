@@ -30,6 +30,8 @@ WORKDIR /app
 
 # Copy the JAR file from the build stage
 COPY --from=build /app/saamfi-rest/target/saamfiapi.war /app/saamfi-backend.war
+COPY --from=build /app/saamfi-rest/src/main/resources/private_key.der /app/private_key.der
+COPY --from=build /app/saamfi-rest/src/main/resources/public_key.der /app/public_key.der
 
 EXPOSE 8080
 
